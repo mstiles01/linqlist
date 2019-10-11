@@ -62,6 +62,30 @@ foreach (int num in fourSixMultiples) {
                 Console.WriteLine (name);
             }
             Console.WriteLine ();
-        }
+
+        List<int>whereSquareDo = new List<int>() {
+         66,
+                12,
+                8,
+                27,
+                82,
+                34,
+                7,
+                50,
+                19,
+                46,
+                81,
+                23,
+                30,
+                4,
+                68,
+                14
+        };
+
+        List<int> numwhereSquareDo = whereSquareDo.TakeWhile(i =>
+        {
+        double sqrt = Math.Sqrt(i);
+        return sqrt % 1 != 0;
+        }).ToList();
     }
 }
