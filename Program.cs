@@ -16,6 +16,52 @@ foreach (string fruit in LFruits) {
     Console.WriteLine (fruit);
 }
 Console.WriteLine();
+
+// Which of the following numbers are multiples of 4 or 6
+List<int> numbers = new List<int>()
+{
+    15, 8, 21, 24, 32, 13, 30, 12, 7, 54, 48, 4, 49, 96
+};
+
+IEnumerable<int> fourSixMultiples = numbers.Where(num => num % 4 == 0 || num % 6 == 0);
+foreach (int num in fourSixMultiples) {
+                Console.WriteLine (num);
+            }
+            Console.WriteLine ();
+
+            // Order these student names alphabetically, in descending order (Z to A)
+            Console.WriteLine ("--- Descending Names ---");
+            List<string> names = new List<string> () {
+                "Heather",
+                "James",
+                "Xavier",
+                "Michelle",
+                "Brian",
+                "Nina",
+                "Kathleen",
+                "Sophia",
+                "Amir",
+                "Douglas",
+                "Zarley",
+                "Beatrice",
+                "Theodora",
+                "William",
+                "Svetlana",
+                "Charisse",
+                "Yolanda",
+                "Gregorio",
+                "Jean-Paul",
+                "Evangelina",
+                "Viktor",
+                "Jacqueline",
+                "Francisco",
+                "Tre"
+            };
+        List<string> descend = names.OrderByDescending(n => n).ToList();
+            foreach (string name in descend) {
+                Console.WriteLine (name);
+            }
+            Console.WriteLine ();
         }
     }
 }
